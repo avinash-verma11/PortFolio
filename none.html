@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Image on Right</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: white;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Background image on right */
+    .bg-image-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: auto;
+      max-width: 50%; /* Control how much space image takes */
+      z-index: 0;
+      opacity: 0.8; /* Optional: slightly transparent */
+    }
+
+    /* Content over everything */
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 60px;
+      max-width: 700px;
+    }
+
+    h1, p {
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Image -->
+  <img src="IMAGES/Bw Image.png" alt="Decorative" class="bg-image-right">
+
+  <!-- Text Content -->
+  <div class="content">
+    <h1>Your Main Heading</h1>
+    <p>
+      This is some text on the left side. If the text gets long enough or the screen is narrow, it will flow over the image too.
+    </p>
+  </div>
+
+</body>
+</html>
